@@ -56,7 +56,7 @@ define([], function () {
             subtitle('<h2>O primeiro é o <span style="color:green">timeout de eleição</span>.</h2>');
         })
         .after(1, function() {
-            subtitle('<h2>O timeout de eleição é o tempo que um seguidor aguarda até tornar-se um cadidato.</h2>');
+            subtitle('<h2>O timeout de eleição é o tempo que um seguidor aguarda até tornar-se um candidato.</h2>');
         })
         .after(1, function() {
             subtitle('<h2>O timeout de eleição é randomicamente definido entre 150ms e 300ms.</h2>');
