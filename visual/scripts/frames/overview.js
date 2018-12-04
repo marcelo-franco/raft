@@ -242,7 +242,7 @@ define(["../model/log_entry"], function (LogEntry) {
 
         .after(300, function () {
             frame.snapshot();
-            model().subtitle = '<h2>This process is called <em>Log Replication</em>.</h2>'
+            model().subtitle = '<h2>Este processo é chamado <em>Replicação de Log</em>.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })

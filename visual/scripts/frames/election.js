@@ -22,7 +22,7 @@ define([], function () {
             layout.invalidate();
         })
         .after(500, function () {
-            frame.model().title = '<h2 style="visibility:visible">Leader Election</h1>'
+            frame.model().title = '<h2 style="visibility:visible">Eleição do Líder</h1>'
                                 + '<br/>' + frame.model().controls.html();
             layout.invalidate();
         })
@@ -47,19 +47,19 @@ define([], function () {
         //------------------------------
         .after(1, function () {
             model().ensureSingleCandidate();
-            model().subtitle = '<h2>In Raft there are two timeout settings which control elections.</h2>'
+            model().subtitle = '<h2>No Raft, há dois parâmetros de timeout que controlam as eleições.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
         .after(model().electionTimeout / 2, function() { model().controls.show(); })
         .after(100, function () {
-            subtitle('<h2>First is the <span style="color:green">election timeout</span>.</h2>');
+            subtitle('<h2>O primeiro é o <span style="color:green">timeout de eleição</span>.</h2>');
         })
         .after(1, function() {
-            subtitle('<h2>The election timeout is the amount of time a follower waits until becoming a candidate.</h2>');
+            subtitle('<h2>O timeout de eleição é o tempo que um seguidor aguarda até tornar-se um cadidato.</h2>');
         })
         .after(1, function() {
-            subtitle('<h2>The election timeout is randomized to be between 150ms and 300ms.</h2>');
+            subtitle('<h2>O timeout de eleição é randomicamente definido entre 150ms e 300ms.</h2>');
         })
         .after(1, function() {
             subtitle("", false);
@@ -72,10 +72,10 @@ define([], function () {
             return (event.target.state() === "candidate");
         })
         .after(1, function () {
-            subtitle('<h2>After the election timeout the follower becomes a candidate and starts a new <em>election term</em>...</h2>');
+            subtitle('<h2>Atingido o timeout de eleição, o seguidor torna-se um candidato e inicia um novo período de eleição <em>(election term)</em>...</h2>');
         })
         .after(1, function () {
-            subtitle('<h2>...votes for itself...</h2>');
+            subtitle('<h2>...vota nele mesmo...</h2>');
         })
         .after(model().defaultNetworkLatency * 0.25, function () {
             subtitle('<h2>...and sends out <em>Request Vote</em> messages to other nodes.</h2>');
