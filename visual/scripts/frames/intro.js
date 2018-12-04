@@ -20,8 +20,8 @@ define([], function () {
         })
 
         .after(1000, function () {
-            frame.model().title = '<h2 style="visibility:visible">So What is Distributed Consensus?</h2>'
-                        + '<h3 style="visibility:hidden;">Let\'s start with an example...</h3>'
+            frame.model().title = '<h2 style="visibility:visible">Então, o que é Consenso Distribuído?</h2>'
+                        + '<h3 style="visibility:hidden;">Vamos começar com um exemplo ...</h3>'
                         + '<br/>' + frame.model().controls.html();
             layout.invalidate();
         })
