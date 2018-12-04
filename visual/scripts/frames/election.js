@@ -187,7 +187,7 @@ define([], function () {
         })
         .after(1, function () {
             model().resetLatencies();
-            subtitle('<h2>O nó ' + model().leader().id + ' recebeu a maioria dos votos no período ' + model().leader().currentTerm() + ', então ele torna-se o líder.</h2>', false);
+            subtitle('<h2>O nó ' + model().leader().id + ' recebeu a maioria dos votos no período (term) ' + model().leader().currentTerm() + ', então ele torna-se o líder.</h2>', false);
         })
         .after(1, wait).indefinite()
 
