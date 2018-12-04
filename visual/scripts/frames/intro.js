@@ -110,7 +110,7 @@ define([], function () {
 
         .after(100, function () {
             frame.snapshot();
-            frame.model().subtitle = '<h3>But how do we come to consensus if we have multiple nodes?</h3>'
+            frame.model().subtitle = '<h3>Mas como chegamos ao consenso se nós tivermos múltiplos nós?</h3>'
                            + frame.model().controls.html();
             layout.invalidate();
         })
