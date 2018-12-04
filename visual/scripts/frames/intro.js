@@ -127,7 +127,7 @@ define([], function () {
 
         .after(100, function () {
             frame.snapshot();
-            frame.model().subtitle = '<h3>That\'s the problem of <em>distributed consensus</em>.</h3>'
+            frame.model().subtitle = '<h3>Este é o problema do <em>consenso distribuído</em>.</h3>'
                            + frame.model().controls.html();
             layout.invalidate();
         })

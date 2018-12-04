@@ -22,14 +22,14 @@ define(["../model/log_entry"], function (LogEntry) {
         })
 
         .after(800, function () {
-            model().subtitle = '<h2><em>Raft</em> is a protocol for implementing distributed consensus.</h2>'
+            model().subtitle = '<h2>O <em>Raft</em> é um protocolo para implementar consenso distribuído.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>Let\'s look at a high level overview of how it works.</h2>'
+            model().subtitle = '<h2>Vamos ver como ele funciona a partir de uma visão geral de alto nível.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -39,7 +39,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             model().zoom([node("b")]);
-            model().subtitle = '<h2>A node can be in 1 of 3 states:</h2>'
+            model().subtitle = '<h2>Um nó pode estar em 1 de 3 estados:</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -47,7 +47,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             node("b")._state = "follower";
-            model().subtitle = '<h2>The <em>Follower</em> state,</h2>'
+            model().subtitle = '<h2>O estado <em>Follower</em>,</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -55,7 +55,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             node("b")._state = "candidate";
-            model().subtitle = '<h2>the <em>Candidate</em> state,</h2>'
+            model().subtitle = '<h2>o estado <em>Candidate</em>,</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -63,7 +63,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             node("b")._state = "leader";
-            model().subtitle = '<h2>or the <em>Leader</em> state.</h2>'
+            model().subtitle = '<h2>ou o estado <em>Leader</em>.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -73,7 +73,7 @@ define(["../model/log_entry"], function (LogEntry) {
             frame.snapshot();
             model().zoom(null);
             node("b")._state = "follower";
-            model().subtitle = '<h2>All our nodes start in the follower state.</h2>'
+            model().subtitle = '<h2>Todos os nós começam no estado <em>follower</em>.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
