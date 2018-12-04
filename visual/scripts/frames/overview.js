@@ -80,7 +80,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>If followers don\'t hear from a leader then they can become a candidate.</h2>'
+            model().subtitle = '<h2>Se os <em>followers</em> perderem o contato com o <em>leader</em>, então eles podem se tornar um <em>candidate</em>.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -91,7 +91,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>The candidate then requests votes from other nodes.</h2>'
+            model().subtitle = '<h2>O <em>candidate</em> então solicita votos para os outros nós.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -103,7 +103,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>Nodes will reply with their vote.</h2>'
+            model().subtitle = '<h2>Os nós vão responder com seus votos.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -121,14 +121,14 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>The candidate becomes the leader if it gets votes from a majority of nodes.</h2>'
+            model().subtitle = '<h2>O <em>candidate</em> torna-se o <em>leader</em> se ele conseguir votos da maioria dos nós.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>This process is called <em>Leader Election</em>.</h2>'
+            model().subtitle = '<h2>Este processo é chamado de <em>eleição do Líder</em>.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -137,7 +137,7 @@ define(["../model/log_entry"], function (LogEntry) {
 
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>All changes to the system now go through the leader.</h2>'
+            model().subtitle = '<h2>Todas as alterações no sistema agora passarão pelo líder.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -162,14 +162,14 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>Each change is added as an entry in the node\'s log.</h2>'
+            model().subtitle = '<h2>Cada alteração é adicionada como uma entrada no log do nó.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>This log entry is currently uncommitted so it won\'t update the node\'s value.</h2>'
+            model().subtitle = '<h2>Esta entrada no log ainda não foi persistida, então ela não vai atualizar o valor do nó.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -184,7 +184,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 node("c")._log.push(new LogEntry(model(), 1, 1, "SET 5"));
                 layout.invalidate();
             });
-            model().subtitle = '<h2>To commit the entry the node first replicates it to the follower nodes...</h2>'
+            model().subtitle = '<h2>Para persistir a entrada, o nó primeiro replica a entrada nos <em>followers</em> ...</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -197,7 +197,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 layout.invalidate();
             });
             model().send(node("c"), node("a"), {type:"AEREQ"});
-            model().subtitle = '<h2>then the leader waits until a majority of nodes have written the entry.</h2>'
+            model().subtitle = '<h2>então o líder aguarda até que a maioria dos nós tenha escrito a entrada.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -209,7 +209,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>The entry is now committed on the leader node and the node state is "5".</h2>'
+            model().subtitle = '<h2>A entrada agora é persistida no nó do líder e o valor do nó passa a ser "5".</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -226,14 +226,14 @@ define(["../model/log_entry"], function (LogEntry) {
                 node("c")._commitIndex = 1;
                 layout.invalidate();
             });
-            model().subtitle = '<h2>The leader then notifies the followers that the entry is committed.</h2>'
+            model().subtitle = '<h2>O líder então notifica os seguidores de que a entrada foi persistida.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>The cluster has now come to consensus about the system state.</h2>'
+            model().subtitle = '<h2>O cluster agora chegou a um consenso sobre o estado do sistema.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
