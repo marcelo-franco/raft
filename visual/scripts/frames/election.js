@@ -135,7 +135,7 @@ define([], function () {
             return (event.target.state() === "leader");
         })
         .after(1, function () {
-            subtitle('<h2>O nó ' + model().leader().id + ' agora é o líder do período ' + model().leader().currentTerm() + '.</h2>', false);
+            subtitle('<h2>O nó ' + model().leader().id + ' agora é o líder do período (term) ' + model().leader().currentTerm() + '.</h2>', false);
         })
         .after(1, wait).indefinite()
 
