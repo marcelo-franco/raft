@@ -14,4 +14,4 @@ O projeto ajuda, de maneira visual e interativa, a compreender o funcionamento d
 
 ## Visualização
 
-[Raft: Algoritmo de Consenso Distribuído](https://marcelo-franco.github.io/raft/visual)
+[Raft: Algoritmo de Consenso Distribuído](https://marcelo-franco.github.io/raft)
