@@ -14,7 +14,7 @@ define([], function () {
         })
 
         .after(500, function () {
-            frame.model().title = '<h1 style="visibility:visible">The End</h1>'
+            frame.model().title = '<h1 style="visibility:visible">Fim</h1>'
                         + '<br/>' + frame.model().controls.html();
             layout.invalidate();
         })
