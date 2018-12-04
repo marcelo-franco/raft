@@ -56,7 +56,7 @@ define([], function () {
             layout.invalidate();
         })
         .after(600, function () {
-            frame.model().subtitle = '<h3>Para este exemplo, você pode pensar no nosso <span style="color:steelblue">nó</span> um servidor de banco de dados que armazena um único valor.</h3>'
+            frame.model().subtitle = '<h3>Para este exemplo, você pode pensar no nosso <span style="color:steelblue">nó</span> como um servidor de banco de dados que armazena um único valor.</h3>'
                            + frame.model().controls.html();
             layout.invalidate();
         })
@@ -75,7 +75,7 @@ define([], function () {
             layout.invalidate();
         })
         .after(1000, function () {
-            frame.model().subtitle = '<h3>We also have a <span style="color:green">client</span> that can send a value to the server.</h3>'
+            frame.model().subtitle = '<h3>Nós temos também um <span style="color:green">cliente</span> que pode enviar um valor para o servidor.</h3>'
                            + frame.model().controls.html();
             layout.invalidate();
         })
@@ -101,7 +101,7 @@ define([], function () {
         })
         .after(100, wait).indefinite()
         .after(100, function () {
-            frame.model().subtitle = '<h3>Coming to agreement, or <em>consensus</em>, on that value is easy with one node.</h3>'
+            frame.model().subtitle = '<h3>Chegar a um acordo, ou <em>consenso</em>, sobre aquele valor, é fácil com um único nó.</h3>'
                            + frame.model().controls.html();
             layout.invalidate();
         })
