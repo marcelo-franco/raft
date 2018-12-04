@@ -78,13 +78,13 @@ define([], function () {
             subtitle('<h2>...vota nele mesmo...</h2>');
         })
         .after(model().defaultNetworkLatency * 0.25, function () {
-            subtitle('<h2>...and sends out <em>Request Vote</em> messages to other nodes.</h2>');
+            subtitle('<h2>...e envia uma mensagem de <em>Requisição de voto</em> para os outros nós.</h2>');
         })
         .after(model().defaultNetworkLatency, function () {
-            subtitle('<h2>If the receiving node hasn\'t voted yet in this term then it votes for the candidate...</h2>');
+            subtitle('<h2>Se o nó que recebe não votou ainda neste período (term), então ele vota no candidato...</h2>');
         })
         .after(1, function () {
-            subtitle('<h2>...and the node resets its election timeout.</h2>');
+            subtitle('<h2>...e o nó reinicia seu timeout de eleição.</h2>');
         })
 
 
@@ -95,22 +95,22 @@ define([], function () {
             return (event.target.state() === "leader");
         })
         .after(1, function () {
-            subtitle('<h2>Once a candidate has a majority of votes it becomes leader.</h2>');
+            subtitle('<h2>Uma vez que um candidato tem a maioria dos votos, ele torna-se líder.</h2>');
         })
         .after(model().defaultNetworkLatency * 0.25, function () {
-            subtitle('<h2>The leader begins sending out <em>Append Entries</em> messages to its followers.</h2>');
+            subtitle('<h2>O líder começa a enviar mensagens de <em>Append Entries</em> para seus seguidores.</h2>');
         })
         .after(1, function () {
-            subtitle('<h2>These messages are sent in intervals specified by the <span style="color:red">heartbeat timeout</span>.</h2>');
+            subtitle('<h2>Estas mensagens são enviadas em intervalos especificados pelo <span style="color:red">timeout de heartbeat</span>.</h2>');
         })
         .after(model().defaultNetworkLatency, function () {
-            subtitle('<h2>Followers then respond to each <em>Append Entries</em> message.</h2>');
+            subtitle('<h2>Os seguidores respondem a cada mensagem de <em>Append Entries</em> message.</h2>');
         })
         .after(1, function () {
             subtitle('', false);
         })
         .after(model().heartbeatTimeout * 2, function () {
-            subtitle('<h2>This election term will continue until a follower stops receiving heartbeats and becomes a candidate.</h2>', false);
+            subtitle('<h2>Este período de eleição (election term) continuará até que um seguidor pare de receber <em>heartbeats</em> e torne-se um candidato.</h2>', false);
         })
         .after(100, wait).indefinite()
         .after(1, function () {
@@ -121,7 +121,7 @@ define([], function () {
         // Leader re-election
         //------------------------------
         .after(model().heartbeatTimeout * 2, function () {
-            subtitle('<h2>Let\'s stop the leader and watch a re-election happen.</h2>', false);
+            subtitle('<h2>Vamos parar o líder e ver a reeleição acontecer.</h2>', false);
         })
         .after(100, wait).indefinite()
         .after(1, function () {
@@ -135,7 +135,7 @@ define([], function () {
             return (event.target.state() === "leader");
         })
         .after(1, function () {
-            subtitle('<h2>Node ' + model().leader().id + ' is now leader of term ' + model().leader().currentTerm() + '.</h2>', false);
+            subtitle('<h2>O nó ' + model().leader().id + ' agora é o líder do período ' + model().leader().currentTerm() + '.</h2>', false);
         })
         .after(1, wait).indefinite()
 
@@ -143,15 +143,15 @@ define([], function () {
         // Split Vote
         //------------------------------
         .after(1, function () {
-            subtitle('<h2>Requiring a majority of votes guarantees that only one leader can be elected per term.</h2>', false);
+            subtitle('<h2>Exigir a maioria dos votos garante que somente um líder pode ser eleito por período (term).</h2>', false);
         })
         .after(1, wait).indefinite()
         .after(1, function () {
-            subtitle('<h2>If two nodes become candidates at the same time then a split vote can occur.</h2>', false);
+            subtitle('<h2>Se dois nós tornam-se candidatos ao mesmo tempo, então uma votação dividida (split vote) pode ocorrer.</h2>', false);
         })
         .after(1, wait).indefinite()
         .after(1, function () {
-            subtitle('<h2>Let\'s take a look at a split vote example...</h2>', false);
+            subtitle('<h2>Vamos ver um exemplo de votação dividida...</h2>', false);
         })
         .after(1, wait).indefinite()
         .after(1, function () {
