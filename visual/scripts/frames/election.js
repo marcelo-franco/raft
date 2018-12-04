@@ -171,23 +171,23 @@ define([], function () {
             return (event.target.state() === "candidate");
         })
         .after(model().defaultNetworkLatency * 0.25, function () {
-            subtitle('<h2>Two nodes both start an election for the same term...</h2>');
+            subtitle('<h2>Dois nós iniciam uma eleição para o mesmo período (term)...</h2>');
         })
         .after(model().defaultNetworkLatency * 0.75, function () {
-            subtitle('<h2>...and each reaches a single follower node before the other.</h2>');
+            subtitle('<h2>...e cada um encontra um único nó seguidor antes do outro.</h2>');
         })
         .after(model().defaultNetworkLatency, function () {
-            subtitle('<h2>Now each candidate has 2 votes and can receive no more for this term.</h2>');
+            subtitle('<h2>Agora, cada candidato tem 2 votos e não pode receber mais nenhum voto neste período (term).</h2>');
         })
         .after(1, function () {
-            subtitle('<h2>The nodes will wait for a new election and try again.</h2>', false);
+            subtitle('<h2>Os nós aguardarão por uma nova eleição e tentarão novamente.</h2>', false);
         })
         .at(model(), "stateChange", function(event) {
             return (event.target.state() === "leader");
         })
         .after(1, function () {
             model().resetLatencies();
-            subtitle('<h2>Node ' + model().leader().id + ' received a majority of votes in term ' + model().leader().currentTerm() + ' so it becomes leader.</h2>', false);
+            subtitle('<h2>O nó ' + model().leader().id + ' recebeu a maioria dos votos no período ' + model().leader().currentTerm() + ', então ele torna-se o líder.</h2>', false);
         })
         .after(1, wait).indefinite()
 
