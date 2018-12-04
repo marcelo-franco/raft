@@ -1,25 +1,17 @@
-The Secret Lives of Data
-========================
+Raft - Algoritmo de Consenso Distribuído
+========================================
 
-> Understanding what your bits do when you're not looking.
+> Entendendo o algoritmo Raft
 
-## Overview
+## Introdução
 
-So often we use databases and servers without really understanding how they work.
-The way that data flows is critical to performance and reliability.
+Este é um fork do projeto original ["The Secret Lives of Data"](https://github.com/benbjohnson/thesecretlivesofdata)
 
-This project seeks to spread the knowledge of our systems through interactive visualization.
-If you have a system that you understand and wish to share then please add a [GitHub Issue](https://github.com/benbjohnson/thesecretlivesofdata/issues).
-Data visualization knowledge is not necessary -- just the desire to spread some knowledge.
+A intenção do fork é traduzir o projeto para o português e disponibilizá-lo ao público no "GitHub pages"
+
+O projeto ajuda, de maneira visual e interativa, a compreender o funcionamento do algoritmo de consenso distribuído conhecido por *Raft*
 
 
-## Visualizations
+## Visualização
 
-Below is a list of data visualizations and their associated Github issue.
-Please report any bugs you find or any suggestions you have for how to make these visualizations more understandable.
-
-1. [Raft: Understandable Distributed Consensus](http://thesecretlivesofdata.com/raft) ([#1](https://github.com/benbjohnson/thesecretlivesofdata/issues/1))
-
-2. Apache Kafka ([#4](https://github.com/benbjohnson/thesecretlivesofdata/issues/4)) - *Planning*
-
-If you have suggestions for new topics, please submit a new Github issue.
+[Raft: Understandable Distributed Consensus](https://marcelo-franco.github.io/raft/)
