@@ -104,7 +104,7 @@ define([], function () {
             subtitle('<h2>Estas mensagens são enviadas em intervalos especificados pelo <span style="color:red">timeout de heartbeat</span>.</h2>');
         })
         .after(model().defaultNetworkLatency, function () {
-            subtitle('<h2>Os seguidores respondem a cada mensagem de <em>Append Entries</em> message.</h2>');
+            subtitle('<h2>Os seguidores respondem a cada mensagem de <em>Append Entries</em>.</h2>');
         })
         .after(1, function () {
             subtitle('', false);
