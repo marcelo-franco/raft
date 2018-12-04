@@ -39,7 +39,7 @@ define([], function () {
 
         .after(800, function () {
             frame.snapshot();
-            frame.model().subtitle = '<h2>Let\'s say we have a single node system</h2>'
+            frame.model().subtitle = '<h2>Vamos supor que nós temos um sistema com um único nó</h2>'
                            + frame.model().controls.html();
             layout.invalidate();
         })
@@ -56,7 +56,7 @@ define([], function () {
             layout.invalidate();
         })
         .after(600, function () {
-            frame.model().subtitle = '<h3>For this example, you can think of our <span style="color:steelblue">node</span> as a database server that stores a single value.</h3>'
+            frame.model().subtitle = '<h3>Para este exemplo, você pode pensar no nosso <span style="color:steelblue">nó</span> um servidor de banco de dados que armazena um único valor.</h3>'
                            + frame.model().controls.html();
             layout.invalidate();
         })
